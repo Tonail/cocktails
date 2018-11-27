@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+#layout {
+  background-color: pink;
+  display: grid;
+  min-height: 100vh;
+  width:100vw;
+  grid-template-rows:100px 1fr 1fr 1fr minmax(50px, 75px) ; 
+  /*grid-template-columns:300px repeat(3, 1fr);*/
+  grid-template-areas:
+    "H H H H" 
+    "N C C C"
+    "N C C C" 
+    "N C C C"
+    "F F F F";
+}
+.head{
+  grid-area: H;
+  height: 100%;
+  width: 100%;
+  background-color: green;
+}
+.navigation{
+  grid-area: N;
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+}
+.content{
+  grid-area: C;
+  height: 100%;
+  width: 100%;
+  background-color: orange;
+}
+.foot{
+  grid-area: F;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+.nav-visible{
+  grid-template-columns:300px repeat(3, 1fr);
+}
+.nav-hidden{
+  grid-template-columns:50px repeat(3, 1fr);
+}
+
+.background {
+  background-color: #282c34;
+  min-height: 100vh;
+  width: 100vw
+} 
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
