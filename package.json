@@ -13,20 +13,11 @@
   },
   "scripts": {
     "dev": "parcel ./src/index.html",
-    "build": "parcel ./src/index.html --public-url ./dist/",
-    "start": "react-scripts start",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "parcel build ./src/index.html"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "devDependencies": {
     "babel-core": "^6.26.3"
   }
