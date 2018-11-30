@@ -6,7 +6,7 @@ import '../../App.css';
 export default class Content extends React.Component {
 	render(){
 		return (
-			<div className='content'>
+			<div className='container'>
 				<h1>Navigation</h1>
 			</div>
 			)
