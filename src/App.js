@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Layout from './Components/layout/'
-import './App.css';
+import './App.less';
 
 const {Navigation, Content, Header, Footer} = Layout
 
