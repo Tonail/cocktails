@@ -1,0 +1,147 @@
+.App {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr 1fr 1fr 50px;
+  grid-template-areas:
+    'h h h h h'
+    'n c c c c'
+    'n c c c c'
+    'n c c c c'
+    'f f f f f';
+  width: 100vw;
+  height: 100vh;
+}
+
+// ~~~~~~ Layout ~~~~~~ //
+.header {
+  grid-area: h;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #222;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+.menu {
+  grid-area: n;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 300px;
+  background-color: rgb(5, 168, 92);
+  position: fixed;
+  animation: slide 1s ease 3.5s;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .menu-logo {
+    img {
+      width: auto;
+      height: 15vh;
+    }
+  }
+  .menu-text {
+    height: 15vh;
+    margin-bottom: 5vh;
+  }
+}
+
+.nav {
+  display: block;
+  position: fixed;
+  top: 17vh;
+}
+.nav-btn {
+  display: flex;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: -2px;
+  border: solid rgba(0, 0, 0, 0.5);
+  border-width: 2px 0 2px 0;
+  color: aliceblue;
+}
+.nav-btn-clps::after {
+  position: fixed;
+  content: 'icon';
+  left: 10px;
+  color: grey;
+}
+.nav-btn:hover {
+  background-color: rgba(4, 83, 46, 0.5);
+}
+.account {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  width: 300px;
+  button {
+    height: 50px;
+    width: 100%;
+  }
+  ul {
+    width: 100%;
+    height: 100%;
+    display: inherit;
+    justify-content: space-between;
+    flex-direction: row;
+    li {
+      width: 50%;
+    }
+  }
+}
+
+.content {
+  grid-area: c;
+  display: flex;
+  background-color: rgb(8, 8, 8);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  grid-area: f;
+  background-color: #222;
+  height: 100%;
+  width: 100%;
+}
+
+.dashboard-container {
+  display: inherit;
+  height: 95%;
+  width: 98%;
+  background-color: #ffffff;
+  justify-content: center;
+}
+
+// ~~~~~~ Utility Classes ~~~~~~ //
+.spacer {
+  margin-bottom: 6em;
+}
+.spacer-small {
+  margin-bottom: 2em;
+}
+.spacer-smaller {
+  margin-bottom: 1em;
+}
+.spacer-smallest {
+  margin-bottom: 0.5em;
+}
+.width-full {
+  width: 100%;
+}
+.width-half {
+  width: 50%;
+}
+.width-qtr {
+  width: 25%;
+}

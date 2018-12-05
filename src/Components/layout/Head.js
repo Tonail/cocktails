@@ -1,14 +1,12 @@
-import React,{ Component } from 'react';
-import '../../App.css';
-
-
+import React, { Component } from 'react'
+import '../../App.css'
 
 export default class Head extends React.Component {
-	render(){
-		return (
-			<div className='header'>
-				<h1>Navigation</h1>
-			</div>
-			)
-	}
+  render() {
+    return (
+      <div className="header">
+        <span>Header</span>
+      </div>
+    )
+  }
 }
