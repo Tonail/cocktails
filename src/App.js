@@ -1,33 +1,34 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Layout from './Components/layout/'
-import './App.less';
+import Layout from "./Components/layout/";
+import "./App.less";
 
-const {Navigation, Content, Header, Footer} = Layout
+const { Navigation, Content, Header, Footer } = Layout;
 
-const initState = () => ({nav: false})
+const initState = () => ({ navState: false });
 
 class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = initState()
+  constructor(props) {
+    super(props);
+    this.state = initState();
   }
 
   toggleNav() {}
+
   _toggleNav(state) {
-    return state ? 'nav-visible' : 'nav-hidden' 
+    return state ? "nav-visible" : "nav-hidden";
   }
 
   render() {
-    console.log(this)
-    const {nav} = this.state 
-    
+    console.log(this);
+    const { navState } = this.state;
+
     return (
-      <div id='layout' className={`App background ${this._toggleNav(nav)}`}>
-       <Header/>
-       <Navigation/>
-       <Content/>
-       <Footer/>
+      <div id="layout" className={`App background`}>
+        <Header />
+        <Navigation visible={this._toggleNav(navState)} />
+        <Content />
+        <Footer />
       </div>
     );
   }
