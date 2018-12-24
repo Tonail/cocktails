@@ -12,13 +12,13 @@
   },
   "scripts": {
     "dev": "parcel ./src/index.html",
+    "nocache": "parcel --no-cache ./src/index.html",
     "build": "parcel build ./src/index.html"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "devDependencies": {
-    "babel-preset-react": "^6.24.1",
     "@babel/core": "^7.2.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",

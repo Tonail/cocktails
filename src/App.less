@@ -1,15 +1,15 @@
-@import "./Globals.less";
+@import './Globals.less';
 
 .App {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 50px 1fr 1fr 1fr 50px;
   grid-template-areas:
-    "h h h h h"
-    "n c c c c"
-    "n c c c c"
-    "n c c c c"
-    "f f f f f";
+    'h h h h h'
+    'c c c c c'
+    'c c c c c'
+    'c c c c c'
+    'f f f f f';
   width: 100vw;
   height: 100vh;
 }
@@ -24,17 +24,30 @@
   width: 100%;
   color: white;
 }
+
+.collapsed {
+  width: 50px;
+}
+.expanded {
+  width: 300px;
+}
+.visible {
+  display: inline-block !important;
+  img {
+    display: inline-block !important;
+  }
+}
+
 .navigation {
   grid-area: n;
   display: flex;
-  // justify-content: space-between;
   align-items: center;
   flex-direction: column;
   height: 100%;
-  width: 300px;
   background-color: @ocat-pink;
   position: fixed;
   animation: slide 1s ease 3.5s;
+
   ul {
     list-style: none;
     width: 100%;
@@ -48,12 +61,11 @@
       }
     }
   }
-  .nav-head {
+  .nav-logo {
     width: 100%;
-
     img {
+      display: none;
       width: 100%;
-      // height: 15vh;
     }
   }
   .nav-foot {

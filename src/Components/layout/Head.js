@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 import '../../App.less'
 
 export default class Head extends React.Component {
   render() {
     return (
       <div className="header">
-        <span>Header</span>
+        <button className="nav-toggle" onClick={() => this.props.navControl()}>
+          Collapse
+        </button>
       </div>
     )
   }

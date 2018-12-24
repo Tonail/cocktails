@@ -1,37 +1,34 @@
-import React, { Component } from "react";
+import React from 'react'
+import Layout from './Components/layout/'
+import { Home, Contact } from './Containers'
 
-import Layout from "./Components/layout/";
-import "./App.less";
+const { Navigation, Content, Header, Footer } = Layout
+const initState = () => ({ navState: false, page: Home })
 
-const { Navigation, Content, Header, Footer } = Layout;
-
-const initState = () => ({ navState: false });
-
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = initState();
+    super(props)
+    this.state = initState()
   }
 
-  toggleNav() {}
-
-  _toggleNav(state) {
-    return state ? "nav-visible" : "nav-hidden";
+  // toggles navigtion visblility
+  toggleNav(e) {
+    const { navState } = this.state
+    this.setState({ navState: !navState })
   }
 
   render() {
-    console.log(this);
-    const { navState } = this.state;
+    const { navState, page } = this.state
 
     return (
       <div id="layout" className={`App background`}>
-        <Header />
-        <Navigation visible={this._toggleNav(navState)} />
-        <Content />
+        <Header navControl={this.toggleNav.bind(this)} />
+        <Navigation visible={navState} />
+        <Content display={page} />
         <Footer />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
