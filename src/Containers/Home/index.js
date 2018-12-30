@@ -1,15 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './home.less'
-import '../../globals.less'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./home.less";
 
 export default class Home extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
   }
   compoentDidUpdate(prevProps, prevState) {
-    console.log(this.props)
+    console.log(this.props);
   }
 
   render() {
@@ -20,6 +19,6 @@ export default class Home extends React.Component {
         <div />
         <div />
       </div>
-    )
+    );
   }
 }
