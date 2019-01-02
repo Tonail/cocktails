@@ -4,11 +4,11 @@
   "private": true,
   "dependencies": {
     "babel-preset-env": "^1.7.0",
-    "eslint": "^5.9.0",
-    "parcel-bundler": "^1.10.3",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "eslint": "^5.11.1",
+    "parcel-bundler": "^1.11.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts": "^2.1.2"
   },
   "scripts": {
     "dev": "parcel ./src/index.html",
@@ -19,7 +19,7 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.0",
+    "@babel/core": "^7.2.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2016": "^6.24.1",
