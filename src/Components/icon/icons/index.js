@@ -1,7 +1,7 @@
-import coffee from './coffee.svg'
-import home from './home.svg'
-import idcard from './idcard.svg'
-import smile from './smile.svg'
+const coffee = require('./coffee.svg')
+const home = require( './home.svg')
+const idcard = require('./idcard.svg')
+const smile = require( './smile.svg')
 
 const Icons = {
   coffee,
@@ -9,6 +9,7 @@ const Icons = {
   idcard,
   smile
 }
+
 
 export default Icons
 

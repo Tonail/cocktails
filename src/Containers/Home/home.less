@@ -1,6 +1,20 @@
+@import '../../Globals.less';
 .home-img {
   width: 100%;
   img {
     width: 100%;
+  }
+}
+
+.desktop{
+  display: block;
+  @media @XXS {
+    display: none;
+  }
+}
+.mobile{
+  display: none;
+  @media @XXS {
+    display: block;
   }
 }
