@@ -1,17 +1,19 @@
 @import './Globals.less';
+@import './Savvy.less';
 
-.App {
+#layout {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 50px 1fr 1fr 1fr 50px;
   grid-template-areas:
-    'h h h h h'
-    'c c c c c'
-    'c c c c c'
-    'c c c c c'
-    'f f f f f';
+    'n h h h h h'
+    'n c c c c c'
+    'n c c c c c'
+    'n c c c c c'
+    'n f f f f f';
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
 }
 
 // ~~~~~~ Layout ~~~~~~ //
@@ -23,6 +25,7 @@
   height: 100%;
   width: 100%;
   color: white;
+  z-index: 99;
 }
 
 .collapsed {
@@ -47,6 +50,7 @@
   background-color: @ocat-pink;
   position: fixed;
   animation: slide 1s ease 3.5s;
+  z-index: 100;
 
   ul {
     list-style: none;
@@ -93,6 +97,19 @@
 
 // ~~~~~~ Utilities ~~~~~~ //
 
+.centered-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pad-small{
+  padding: .5em;
+}
+.pad{
+  padding: 1em;
+}
 .spacer {
   margin-bottom: 6em;
 }
@@ -114,7 +131,9 @@
 .width-qtr {
   width: 25%;
 }
-
+.fill-height{
+  height: 100%;
+}
 .pointer {
   cursor: pointer;
 }
@@ -122,4 +141,8 @@
 // ~~~~~~ Color Utilities ~~~~~~ //
 .fill-black {
   background-color: black;
+}
+.fill-grey {
+  background-color: lightgrey;
+
 }
