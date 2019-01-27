@@ -1,5 +1,5 @@
 import React from 'react'
-import * as Page from './containers'
+import * as Page from './Containers'
 import {Route, Switch, Redirect} from 'react-router-dom'
 
 export default class Routes extends React.Component {
