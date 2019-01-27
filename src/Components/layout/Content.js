@@ -15,10 +15,12 @@ export default class Content extends React.Component {
   }
 
   render() {
-   const Display = this.props.display
+   const {children} = this.props
+   console.log(this.props)
+
     return (
       <div className="content">
-        <Display />
+        {children}
       </div>
     )
   }

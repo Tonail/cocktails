@@ -1,9 +1,15 @@
 import React from 'react'
 import Layout from './Components/layout/'
-import { Home, Contact } from './Containers'
+// import * as Pages from './Containers'
+import { Router, Route, Link } from 'react-router-dom'
+import Routes from './routes.js'
+import { createBrowserHistory } from 'history';
 
+const history = createBrowserHistory();
+const location = history.location;
 const { Navigation, Content, Header, Footer } = Layout
-const initState = () => ({ navState: false, page: Home })
+
+const initState = () => ({ navState: false})
 
 class App extends React.Component {
   constructor(props) {
@@ -19,14 +25,18 @@ class App extends React.Component {
 
   render() {
     const { navState, page } = this.state
-
+    // const display = <Routes/>
     return (
-      <div id="layout" className={`App background`}>
-        <Header navControl={this.toggleNav.bind(this)} />
-        <Navigation visible={navState} />
-        <Content display={page} />
-        <Footer />
-      </div>
+      <Router history={history}>
+        <div id="layout" className={`App background`}>
+          <Header navControl={this.toggleNav.bind(this)} />
+          <Navigation visible={navState} />
+          <Content>
+            <Routes key='router'/>
+          </Content>
+          <Footer />
+        </div>
+      </Router>
     )
   }
 }
