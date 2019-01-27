@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./home.less";
+import RandomPic from '../../Components/randomPic' 
+
+
 import desktopLogo from "../../images/media/OCAT-Foreground-02.png"
 import mobileLogo from "../../images/media/mobile-home-screen.png"
 import parallax from "../../images/media/Background-04.png"
@@ -32,20 +35,17 @@ export default class Home extends React.Component {
             className="mobile"
           />
         </div>
-      <div className='fill-height fill-grey pad left-column'>
+      <div className='fill-height full-width fill-grey pad left-column'>
        <h3>Tony Bush</h3>
         <p>
-          St Louis based Graphic & Web Designer with over 
-          five years of industry experience, he enjoys creating 
-          new content and meeting clients needs. 
-          Tony’s skills include a grasp of HTML, CSS, & Javascript. 
-          Plus knowledge in JQuery, AJAX  and RESTful API integration mixed 
-          in with a wealth of design poise. Projects big or small 
-          Tony has what's needed to take your brand to the next level.
+          Welcome to my React playground explore! Things arnt what they seem.
         </p>
         <div>
           <button>Contact Me</button>
         </div>
+     </div>
+     <div>
+        <RandomPic/>
      </div>
   </div>
     );
