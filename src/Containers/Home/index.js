@@ -35,13 +35,12 @@ export default class Home extends React.Component {
             className="mobile"
           />
         </div>
-      <div className='fill-height width-full fill-grey pad left-column'>
-       <h3>Tony Bush</h3>
-        <p>
-          Welcome to my React playground explore! Things arnt what they seem.
-        </p>
-        <div>
-          <button>Contact Me</button>
+      <div className='fill-height width-full fill-grey pad center-column'>
+         <h3>Tony Bush</h3>
+          <p>
+            Welcome to my React playground explore! Things arnt what they seem.
+          </p>
+          <div>
         </div>
      </div>
      <RandomPic speed={5000}/>
