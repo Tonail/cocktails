@@ -35,7 +35,7 @@ export default class Home extends React.Component {
             className="mobile"
           />
         </div>
-      <div className='fill-height width-full fill-grey pad center-column'>
+      <div className='fill-height width-full fill-grey pad centered-column'>
          <h3>Tony Bush</h3>
           <p>
             Welcome to my React playground explore! Things arnt what they seem.
