@@ -16,11 +16,23 @@ export default class Navigation extends React.Component {
     this.fetchPic()
     this.imageFetch = setInterval(this.fetchPic, speed ? speed : 5000);
   }
-  fetchPic = () =>  {
-    fetch('https://picsum.photos/1200/500/?random').then( res => {
-          this.setState({image: res.url})
-        }
-      )
+  fetchPic = async () =>  {
+    try {
+      const res = await fetch('https://picsum.photos/1200/500/?random')
+      this.setState({image: res.url})
+    } catch(err) {
+      console.log(err)
+    }
+  }
+  fetchQoute = async () =>  {
+    /* fetch from random qoute api if qoutes are requested in props */
+
+    // try {
+    //   const res = await fetch('https://picsum.photos/1200/500/?random')
+    //   this.setState({image: res.url})
+    // } catch(err) {
+    //   console.log(err)
+    // }
   }
 
   render() {
