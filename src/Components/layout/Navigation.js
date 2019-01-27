@@ -1,6 +1,8 @@
 import React from 'react'
 import '../../App.less'
 import Icon from '../icon'
+import {Link, Route} from 'react-router-dom'
+
 
 export default class Navigation extends React.PureComponent {
   constructor(props) {
@@ -30,9 +32,11 @@ export default class Navigation extends React.PureComponent {
     const navKeys = Object.keys(navLinks)
 
     const genNavItem = (item, expanded) => (
-      <li className="pointer" onClick={this.navigate}>
-        {expanded ? item.title : <Icon type={item.icon} />}
-      </li>
+      <Link to={`/${item.title.toLowerCase()}`}>
+        <li className="pointer" key={item.title} onClick={this.navigate}>
+          {expanded ? item.title : <Icon type={item.icon} />}
+        </li>
+      </Link>
     )
 
     return (
