@@ -8,8 +8,9 @@ export default class Routes extends React.Component {
     return (
       <Switch>
         <Route exact path="/home" component={Page.Home} />
-        <Route exact path="/contact" component={Page.Contact} />
-        
+        <Route exact path="/art" component={Page.Art} />
+        <Route exact path="/code" component={Page.Code} />
+        <Route exact path="/about" component={Page.Contact} />        
         <Redirect exact from="/" to="/home" />
       </Switch>
     )

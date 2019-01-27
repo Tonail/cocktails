@@ -1,16 +1,16 @@
-@import './Globals.less';
-@import './Savvy.less';
+@import "./Globals.less";
+@import "./Savvy.less";
 
 #layout {
   display: grid;
   grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 50px 1fr 1fr 1fr 50px;
   grid-template-areas:
-    'n h h h h h'
-    'n c c c c c'
-    'n c c c c c'
-    'n c c c c c'
-    'n f f f f f';
+    "n h h h h h"
+    "n c c c c c"
+    "n c c c c c"
+    "n c c c c c"
+    "n f f f f f";
   width: 100vw;
   min-height: 100vh;
   max-height: 100%;
@@ -97,6 +97,13 @@
 
 // ~~~~~~ Utilities ~~~~~~ //
 
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+
 .centered-column {
   display: flex;
   justify-content: center;
@@ -110,10 +117,10 @@
   flex-direction: column;
 }
 
-.pad-small{
-  padding: .5em;
+.pad-small {
+  padding: 0.5em;
 }
-.pad{
+.pad {
   padding: 1em;
 }
 .spacer {
@@ -137,7 +144,7 @@
 .width-qtr {
   width: 25%;
 }
-.fill-height{
+.fill-height {
   height: 100%;
 }
 .pointer {
@@ -150,5 +157,4 @@
 }
 .fill-grey {
   background-color: lightgrey;
-
 }

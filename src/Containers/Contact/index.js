@@ -9,6 +9,6 @@ export default class Contact extends React.Component {
 	}
 
 	render() {
-		return <div>Contact</div>;
+		return <div className='width-full fill-grey'>Contact</div>;
 	}
 }
