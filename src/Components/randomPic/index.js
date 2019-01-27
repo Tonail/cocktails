@@ -6,16 +6,18 @@ import 'whatwg-fetch'
 export default class Navigation extends React.Component {
   constructor(props) {
     super(props)
+    this.imageFetch = null
     this.state = {
       image: null
     }
   }
   componentDidMount() {
+    const {speed} = this.props
     this.fetchPic()
+    this.imageFetch = setInterval(this.fetchPic, speed ? speed : 5000);
   }
-  fetchPic() {
-    fetch('https://picsum.photos/1200/300/?random').then( res => {
-          console.log('fetch',res)
+  fetchPic = () =>  {
+    fetch('https://picsum.photos/1200/500/?random').then( res => {
           this.setState({image: res.url})
         }
       )
@@ -24,8 +26,8 @@ export default class Navigation extends React.Component {
   render() {
     const { image } = this.state
     console.log(image)
-    return <div className='full-width fill-grey' >
-    {image && (<img className="full-width" src={image} />) }
+    return <div className='width-full fill-grey' >
+    {image && (<img className="width-full" src={image} />) }
       </div>
   }
 }

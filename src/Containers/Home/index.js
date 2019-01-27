@@ -35,7 +35,7 @@ export default class Home extends React.Component {
             className="mobile"
           />
         </div>
-      <div className='fill-height full-width fill-grey pad left-column'>
+      <div className='fill-height width-full fill-grey pad left-column'>
        <h3>Tony Bush</h3>
         <p>
           Welcome to my React playground explore! Things arnt what they seem.
@@ -44,9 +44,7 @@ export default class Home extends React.Component {
           <button>Contact Me</button>
         </div>
      </div>
-     <div>
-        <RandomPic/>
-     </div>
+     <RandomPic speed={5000}/>
   </div>
     );
   }
